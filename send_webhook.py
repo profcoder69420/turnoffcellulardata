@@ -11,10 +11,10 @@ if not WEBHOOK_URL:
     sys.exit(1)
 
 # Customize message via env var or fallback
-CUSTOM_MESSAGE = os.environ.get("MESSAGE", "Hello world! This is an hourly message.")
+CUSTOM_MESSAGE = os.environ.get("Always turn off cellular data when you're not using it!")
 timestamp = datetime.now(timezone.utc).astimezone().isoformat()
 payload = {
-    "content": f"{CUSTOM_MESSAGE}\n🕓 Sent at: {timestamp}"
+    "content":  CUSTOM_MESSAGE
 }
 
 # Basic retry with exponential backoff
