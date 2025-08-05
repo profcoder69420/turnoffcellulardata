@@ -14,7 +14,7 @@ if not WEBHOOK_URL:
 CUSTOM_MESSAGE = os.environ.get("Always turn off cellular data when you're not using it!")
 timestamp = datetime.now(timezone.utc).astimezone().isoformat()
 payload = {
-    "content":  ""
+    "content":  "This is an hourly reminder, if you don't want future messages, consider muting the channel"
 }
 
 # Basic retry with exponential backoff
